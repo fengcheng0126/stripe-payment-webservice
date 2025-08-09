@@ -2,6 +2,9 @@ const express = require("express");
 const app = express();
 const { resolve } = require("path");
 const env = require("dotenv").config({ path: "./.env" });
+
+const cors = require("cors");
+
 console.log("Stripe Secret Key:", process.env.STRIPE_SECRET_KEY ? "Loaded" : "Missing");
 console.log("Stripe Publishable Key:", process.env.STRIPE_PUBLISHABLE_KEY ? "Loaded" : "Missing");
 
