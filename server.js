@@ -12,6 +12,10 @@ const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY, {
 // ✅ Parse incoming JSON request bodies
 app.use(express.json());
 
+app.use(cors({
+  origin: "https://str333ak-pcs.web.app"
+}));
+
 // Serve static files (e.g. index.html)
 // app.use(express.static(process.env.STATIC_DIR));
 
