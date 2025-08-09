@@ -59,6 +59,7 @@ app.post("/create-payment-intent", async (req, res) => {
   console.log("Request body:", req.body);
 });
 
-app.listen(5252, () =>
-  console.log(`Node server listening at http://localhost:5252`)
+const PORT = process.env.PORT || 5252;
+app.listen(PORT, () => 
+  console.log(`Node server listening at http://localhost:${PORT}`)
 );
